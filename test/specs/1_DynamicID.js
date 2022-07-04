@@ -1,4 +1,4 @@
-describe.skip('Dynamic ID', () => {
+describe('Dynamic ID', () => {
     it('Make sure that ID is not used for button identification', async () => {
         await browser.url('/' + 'dynamicid');
         await browser.pause(2000)
@@ -16,6 +16,8 @@ describe.skip('Dynamic ID', () => {
 
         await button.click();
         await browser.pause(2000);
-        await browser.saveScreenshot('screenshots/1_DynamicID.png');
+        after(async () => {
+            await browser.saveScreenshot('screenshots/1_DynamicID.png');
+        });
     });
 });

@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-describe.skip('Class Attribute', () => {
+describe('Class Attribute', () => {
     it('Make sure that it can identify the button using btn-primary class', async () => {
         await browser.url('/' + 'classattr');
         await browser.pause(2000)
@@ -20,6 +20,9 @@ describe.skip('Class Attribute', () => {
 
         assert.equal(alert_text, 'Primary button pressed');
 
-        await browser.saveScreenshot('screenshots/2_ClassAttribute.png');
+        after(async () => {
+            await browser.saveScreenshot('screenshots/2_ClassAttribute.png');
+
+        });
     });
 });

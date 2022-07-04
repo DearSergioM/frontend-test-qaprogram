@@ -1,5 +1,5 @@
-describe.skip('Load Delays', () => {
-    it('Make wait for the page to load and see de button after the delay', async () => {
+describe('Load Delays', () => {
+    it('I should wait for the page to load and see de button after the delay', async () => {
         await browser.url('/');
         let link = await $('a[href="/loaddelay"]');
         await link.click();
@@ -15,6 +15,8 @@ describe.skip('Load Delays', () => {
         //Second click to the green button should not work, verify with console
         console.log('Blue Button is clickable? ' + await blueButton.isClickable());
 
-        await browser.saveScreenshot('screenshots/4_LoadDelay.png');
+        after(async () => {
+            await browser.saveScreenshot('screenshots/4_LoadDelay.png');
+        });
     });
 });
