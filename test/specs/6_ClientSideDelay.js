@@ -1,4 +1,4 @@
-describe('Client Side Delay', () => {
+describe.skip('Client Side Delay', () => {
     it('I should click on the button and wait for the text to be loaded', async () => {
         await browser.url('/' + 'clientdelay');
 

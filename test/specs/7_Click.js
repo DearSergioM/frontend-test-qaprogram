@@ -1,4 +1,4 @@
-describe('Click', () => {
+describe.skip('Click', () => {
     it('I should be able to click on the button', async () => {
         await browser.url('/' + 'click');
         expect(browser).toHaveTitleContaining('Click');

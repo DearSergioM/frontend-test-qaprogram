@@ -1,4 +1,4 @@
-describe('AJAX Data', () => {
+describe.skip('AJAX Data', () => {
     it('I should click on the button and wait for the text to be loaded', async () => {
         await browser.url('/' + 'ajax');
 

@@ -1,4 +1,4 @@
-describe('Class Attribute', () => {
+describe.skip('Class Attribute', () => {
     it('I should not be able to click the green button twice', async () => {
         await browser.url('/' + 'hiddenlayers');
         await browser.pause(2000)

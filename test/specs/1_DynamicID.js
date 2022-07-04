@@ -1,4 +1,4 @@
-describe('Dynamic ID', () => {
+describe.skip('Dynamic ID', () => {
     it('Make sure that ID is not used for button identification', async () => {
         await browser.url('/' + 'dynamicid');
         await browser.pause(2000)

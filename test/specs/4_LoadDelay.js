@@ -1,4 +1,4 @@
-describe('Load Delays', () => {
+describe.skip('Load Delays', () => {
     it('I should wait for the page to load and see de button after the delay', async () => {
         await browser.url('/');
         let link = await $('a[href="/loaddelay"]');
