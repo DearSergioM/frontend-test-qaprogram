@@ -1,4 +1,4 @@
-describe('Sample App', () => {
+describe.skip('Sample App', () => {
     it('I should be able to fill the form and submited', async () => {
         await browser.url('/' + 'sampleapp');
         expect(browser).toHaveTitleContaining('Sample App');
