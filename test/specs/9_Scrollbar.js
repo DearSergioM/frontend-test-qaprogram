@@ -1,5 +1,5 @@
-describe('Scrollbars', () => {
-    it('I should be able to set the name of button throught the input text when I add a value and make click on the button', async () => {
+describe.skip('Scrollbars', () => {
+    it('I should be able to see the hidden button using the scrollbars', async () => {
         await browser.url('/' + 'scrollbars');
         expect(browser).toHaveTitleContaining('Scrollbars');
         await browser.pause(3000);
