@@ -5,8 +5,8 @@ describe.skip('Class Attribute', () => {
 
         expect(browser).toHaveTitleContaining('Hidden Layers');
 
-            let greenButton = await $('.btn-success');
-            let blueButton = await $('.btn-primary');
+            const greenButton = await $('.btn-success');
+            const blueButton = await $('.btn-primary');
 
             //First click to the green button
             await greenButton.click();

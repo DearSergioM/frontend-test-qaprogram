@@ -4,7 +4,7 @@ describe.skip('Scrollbars', () => {
         expect(browser).toHaveTitleContaining('Scrollbars');
         await browser.pause(3000);
 
-        let button = await $('#hidingButton');
+        const button = await $('#hidingButton');
         
         await expect(button).toBeDisplayed();
 

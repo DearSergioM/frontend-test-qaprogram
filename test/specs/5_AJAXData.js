@@ -4,12 +4,12 @@ describe.skip('AJAX Data', () => {
 
         expect(browser).toHaveTitleContaining('AJAX Data');
 
-        let waitButton = await $('#ajaxButton');
+        const waitButton = await $('#ajaxButton');
         await waitButton.click();
 
         await browser.pause(15000);
 
-        let text = await $('.bg-success');
+        const text = await $('.bg-success');
 
         await expect(text).toBeDisplayed();
         await text.click();

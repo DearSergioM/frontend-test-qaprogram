@@ -4,9 +4,9 @@ describe.skip('Sample App', () => {
         expect(browser).toHaveTitleContaining('Sample App');
         await browser.pause(3000);
 
-        let username = await $('input[type="text"]');
-        let password = await $('input[type="password"]');
-        let buttonLogin = await $('#login')
+        const username = await $('input[type="text"]');
+        const password = await $('input[type="password"]');
+        const buttonLogin = await $('#login')
 
         await username.setValue('test.user');
         await password.setValue('pwd');
@@ -14,9 +14,9 @@ describe.skip('Sample App', () => {
 
         await browser.pause(3000);
 
-        let messageWelcome = await $('#loginstatus');
+        const messageWelcome = await $('#loginstatus');
 
-        let userloggin = await (await $('input[type="text"]')).getText();
+        const userloggin = await (await $('input[type="text"]')).getText();
         await expect(messageWelcome).toHaveTextContaining('Welcome, ' + userloggin);
 
         after(async () => {

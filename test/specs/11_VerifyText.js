@@ -4,7 +4,7 @@ describe.skip('Verify Text', () => {
         expect(browser).toHaveTitleContaining('Verify Text');
         await browser.pause(3000);
 
-        let text = await (await $("//span[normalize-space(.)='Welcome UserName!']")).getText();
+        const text = await (await $("//span[normalize-space(.)='Welcome UserName!']")).getText();
 
         await expect(text).toEqual('Welcome UserName!');
 

@@ -7,7 +7,7 @@ describe.skip('Class Attribute', () => {
 
         expect(browser).toHaveTitleContaining('Class Attribute');
 
-        let button = await $('.btn-primary');
+        const button = await $('.btn-primary');
 
         await expect(button).toExist();
 

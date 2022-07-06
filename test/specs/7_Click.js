@@ -4,7 +4,7 @@ describe.skip('Click', () => {
         expect(browser).toHaveTitleContaining('Click');
         await browser.pause(3000);
 
-        let button = await $('#badButton');
+        const button = await $('#badButton');
 
         await button.click();
         await expect(button).toBeClickable();

@@ -4,18 +4,19 @@ describe.skip('Progress Bar', () => {
         expect(browser).toHaveTitleContaining('Progress Bar');
         await browser.pause(3000);
 
-        let startButton = await $('#startButton');
-        let stopButton = await $('#stopButton');
-        let progressBar = await $('#progressBar');
+        const startButton = await $('#startButton');
+        const stopButton = await $('#stopButton');
+        const progressBar = await $('#progressBar');
 
         await startButton.click();
-        
+
         await progressBar.waitUntil(
             async () => (await $('#progressBar').getText()) === '75%',
             {
-                timeout: 30000
+                timeout: 30000,
             }
         );
+
         await stopButton.click();
 
         after(async () => {
@@ -23,4 +24,3 @@ describe.skip('Progress Bar', () => {
         });
     });
 });
-

@@ -4,16 +4,16 @@ describe.skip('Visibility', () => {
         expect(browser).toHaveTitleContaining('Visibility');
         await browser.pause(3000);
 
-        let hideButton = await $('#hideButton');
-        let removedButton = await $('#removedButton');
-        let zeroWidthButton = await $('#zeroWidthButton');
-        let overlappedButton = await $('#overlappedButton');
-        let opacityButton = await $('#transparentButton');
-        let visibilityHiddenButton = await $('#invisibleButton');
-        let displayNoneButton = await $('#notdisplayedButton');
-        let offscreenButton = await $('#offscreenButton');
+        const hideButton = await $('#hideButton');
+        const removedButton = await $('#removedButton');
+        const zeroWidthButton = await $('#zeroWidthButton');
+        const overlappedButton = await $('#overlappedButton');
+        const opacityButton = await $('#transparentButton');
+        const visibilityHiddenButton = await $('#invisibleButton');
+        const displayNoneButton = await $('#notdisplayedButton');
+        const offscreenButton = await $('#offscreenButton');
 
-        let hiddingLayer = await $('#hidingLayer');
+        const hiddingLayer = await $('#hidingLayer');
 
         await expect(hideButton).toBeDisplayed
         await expect(removedButton).toBeDisplayed

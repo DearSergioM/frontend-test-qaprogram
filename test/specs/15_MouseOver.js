@@ -9,7 +9,7 @@ describe.skip('Mouse Over', () => {
         await linkClickMe.click();
         await linkClickMe.click();
         
-        let coutlabel = await $('#clickCount');
+        const coutlabel = await $('#clickCount');
         await expect(coutlabel).toHaveTextContaining('2');
         await browser.pause(3000);
 

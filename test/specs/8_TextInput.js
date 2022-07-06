@@ -4,11 +4,11 @@ describe.skip('Text Input', () => {
         expect(browser).toHaveTitleContaining('Text Input');
         await browser.pause(3000);
 
-        let input = await $('#newButtonName');
+        const input = await $('#newButtonName');
         await expect(input).toBeDisplayed();
         await input.setValue('From test automation');
 
-        let button = await $('#updatingButton');
+        const button = await $('#updatingButton');
         await expect(button).toBeDisplayed();
         await expect(button).toBeClickable();
         await button.click();

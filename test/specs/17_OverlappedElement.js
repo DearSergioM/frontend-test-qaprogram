@@ -1,4 +1,4 @@
-describe('Overlapped Element', () => {
+describe.skip('Overlapped Element', () => {
     it('I should be able add text to the fields after scrolling the bar', async () => {
         await browser.url('/' + 'overlapped');
         expect(browser).toHaveTitleContaining('Overlapped Element');

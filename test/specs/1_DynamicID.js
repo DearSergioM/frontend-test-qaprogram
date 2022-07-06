@@ -5,12 +5,12 @@ describe.skip('Dynamic ID', () => {
 
         expect(browser).toHaveTitleContaining('Dynamic ID');
 
-        let exercice = await $('h3');
+        const exercice = await $('h3');
 
         await expect(exercice).toExist();
         await expect(exercice).toHaveTextContaining('Dynamic ID');
 
-        let button = await $('.btn-primary');
+        const button = await $('.btn-primary');
 
         await expect(button).toExist();
 
