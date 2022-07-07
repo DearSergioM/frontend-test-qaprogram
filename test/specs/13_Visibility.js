@@ -1,5 +1,6 @@
 describe.skip('Visibility', () => {
     it('I should be able to clic on the Hide button, and verify that the other elements are not displayed', async () => {
+        //Load Page
         await browser.url('/' + 'visibility');
         expect(browser).toHaveTitleContaining('Visibility');
         await browser.pause(3000);
@@ -14,7 +15,7 @@ describe.skip('Visibility', () => {
         const offscreenButton = await $('#offscreenButton');
 
         const hiddingLayer = await $('#hidingLayer');
-
+        //Verify if the button is visible on the page
         await expect(hideButton).toBeDisplayed
         await expect(removedButton).toBeDisplayed
         await expect(zeroWidthButton).toBeDisplayed
@@ -28,6 +29,7 @@ describe.skip('Visibility', () => {
 
         await expect(hiddingLayer).toBeDisplayed;
 
+        //Verify if the button is visible on the page trhough the console
         console.log(
             'Remove button is displayed = ' + await removedButton.isDisplayed() + '\n' +
             'Zero width button is displayed = ' + await zeroWidthButton.isDisplayed() + '\n' +
